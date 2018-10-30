@@ -112,7 +112,7 @@ class PandasTS:
         
         if period.startdate.year == period.enddate.year:
             endfirstyear = period.enddate
-            BALLE # Have to check as below moving last date forward
+            ERRORCHECK # Have to check as below moving last date forward
         else:
             yyyymmdd = '%(y)d0131' %{'y':period.startdate.year+1}
             endfirstyear = mj_dt.yyyymmddDate(yyyymmdd)
@@ -180,7 +180,7 @@ class PandasTS:
         #df1['e'] = Series(np.random.randn(sLength), index=df1.index)
 
         #print self.df
-        #BALLE
+        #ERRORCHECK
         
     def SetDFvalues(self,ts):
         self.df = pd.Series(ts, index=self.dateArr)
